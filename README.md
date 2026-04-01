@@ -30,10 +30,3 @@ Este proyecto representa una etapa importante de mi crecimiento: aqui se nota mi
 
 Si usas VS Code, `Live Server` es suficiente para verlo rapidamente.
 
-
-## Siguientes mejoras sugeridas
-
-- Agregar una seccion breve de proceso o aprendizajes dentro de la propia interfaz.
-- Incorporar captura o GIF de la experiencia para enriquecer el README.
-- Migrar a consumo de API en vivo como una segunda version del proyecto.
-- Añadir pruebas basicas de interfaz si el proyecto evoluciona a una version mas robusta.
