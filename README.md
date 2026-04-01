@@ -30,29 +30,6 @@ Este proyecto representa una etapa importante de mi crecimiento: aqui se nota mi
 
 Si usas VS Code, `Live Server` es suficiente para verlo rapidamente.
 
-## Prompt para seguir mejorandolo
-
-Puedes usar este prompt cuando quieras iterar el proyecto con ayuda de IA sin perder su intencion de portafolio:
-
-```text
-Actua como senior frontend developer y portfolio reviewer. Quiero mejorar mi proyecto Pokedex para que funcione como una pieza fuerte de mi portafolio. Debes respetar que es un proyecto que muestra mis inicios como developer y mi gusto por el frontend, asi que no quiero una app generica ni sobreingenierizada.
-
-Objetivos:
-- Mantener la esencia del proyecto original, pero elevar su presentacion visual y narrativa.
-- Mejorar experiencia de usuario, accesibilidad, responsive design y microinteracciones.
-- Detectar detalles que hagan que el proyecto se vea mas profesional frente a reclutadores o clientes.
-- Reescribir el README con enfoque de portafolio: contexto, stack, decisiones de diseno, aprendizajes y siguientes pasos.
-- Si hace falta, actualiza HTML, CSS y JavaScript para que la demo se vea mas pulida y moderna.
-
-Al trabajar:
-- Explica primero que oportunidades ves en el proyecto.
-- Prioriza cambios de alto impacto visual y de UX.
-- Evita borrar por completo la personalidad original del proyecto.
-- Manten una narrativa honesta: este proyecto debe comunicar crecimiento, no fingir que fue hecho por un equipo grande.
-- Propone mejoras concretas listas para implementarse y, si es posible, aplicalas.
-
-Quiero que el resultado final se sienta como una pieza de portafolio frontend con identidad propia.
-```
 
 ## Siguientes mejoras sugeridas
 
