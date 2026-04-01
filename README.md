@@ -2,6 +2,8 @@
 
 Una Pokedex frontend inspirada en los primeros 151 Pokemon, creada originalmente como parte de mis inicios como developer y mejorada para formar parte de mi portafolio. El objetivo de esta version es mostrar criterio visual, manejo de DOM con JavaScript vanilla y sensibilidad por la experiencia de usuario en una interfaz retro con personalidad.
 
+https://montseortiz.github.io/Pokedex/
+
 ## Lo que muestra este proyecto
 
 - Maquetacion responsive con `HTML`, `CSS`, `Bootstrap` y `JavaScript`.
