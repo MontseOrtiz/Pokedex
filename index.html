@@ -1,48 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <!-- Google fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Special+Elite&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Pokedex frontend creada como proyecto inicial de desarrollo web. Explora los primeros 151 Pokemon con busqueda, filtros y modal interactivo."
     />
 
-    <!-- Fontawesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://use.fontawesome.com/eb9082049f.js"></script>
-
-    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="./sources/pokeball.png" sizes="16x16" />
 
-    <link rel="icon" type="image" href="./sources/pokeball.png" sizes="16x16" />
-
-    <title>POKEDEX</title>
+    <title>Pokedex | Portfolio Frontend</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top fondo-nav">
-      <a class="navbar-brand" href="index.html">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top portfolio-nav">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img
           src="./sources/logo.png"
-          width="auto"
-          height="30"
+          height="34"
           class="d-inline-block align-top"
           alt="Pokedex Logo"
           loading="lazy"
         />
       </a>
+
       <button
         class="navbar-toggler"
         type="button"
@@ -50,48 +46,88 @@
         data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
-        aria-label="Toggle navigation"
+        aria-label="Abrir menu"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="form-inline ml-auto">
-          <button
-            class="btn btn-outline-secondary mr-1"
-            onclick="mostrarTodos()"
-            type="button"
-          >
-            Mostrar Todos
+        <div class="portfolio-actions ml-auto">
+          <button class="btn portfolio-btn portfolio-btn-secondary" id="show-all-btn" type="button">
+            Ver coleccion completa
           </button>
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Buscar"
-            aria-label="Buscar"
-            id="buscador-input"
-          />
-          <button
-            class="btn btn-outline-secondary my-2 my-sm-0"
-            onclick="buscador()"
-          >
-            Buscar
+          <button class="btn portfolio-btn portfolio-btn-ghost" id="clear-search-btn" type="button">
+            Limpiar busqueda
           </button>
         </div>
       </div>
     </nav>
 
-    <!-- <div class="d-flex flex-row justify-column-center"></div> -->
+    <main class="container-fluid portfolio-shell" id="main-container">
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <span class="eyebrow">Proyecto de portafolio</span>
+          <h1>Pokedex retro con foco en experiencia visual y frontend.</h1>
+          <p>
+            Este proyecto representa una de mis primeras etapas como developer.
+            Lo converti en una pieza de portafolio para mostrar mi interes por interfaces
+            con identidad, detalle visual y experiencias interactivas hechas con HTML, CSS y JavaScript.
+          </p>
+        </div>
 
-    <main class="container-fluid" id="main-container">
-      <div
-        class="d-flex flex-row flex-wrap justify-content-around"
-        id="card-container"
-      ></div>
+        <div class="hero-metrics" aria-label="Resumen del proyecto">
+          <article class="metric-card">
+            <span class="metric-label">Pokemon</span>
+            <strong class="metric-value" id="total-count">151</strong>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Tipos</span>
+            <strong class="metric-value" id="type-count">18</strong>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Stack</span>
+            <strong class="metric-value">HTML + CSS + JS</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="toolbar-panel" aria-label="Herramientas de exploracion">
+        <div class="search-block">
+          <label class="search-label" for="buscador-input">Buscar por nombre, tipo o numero</label>
+          <div class="search-row">
+            <input
+              class="form-control search-input"
+              type="search"
+              placeholder="Ej. Pikachu, fire o 25"
+              aria-label="Buscar pokemon"
+              id="buscador-input"
+            />
+            <button class="btn portfolio-btn portfolio-btn-primary" id="search-btn" type="button">
+              Buscar
+            </button>
+          </div>
+        </div>
+
+        <div class="filters-block">
+          <p class="filters-title">Explora por tipo</p>
+          <div class="type-filter-list" id="type-filter-list"></div>
+        </div>
+
+        <div class="results-bar">
+          <p class="results-copy" id="results-copy">Mostrando los 151 Pokemon originales.</p>
+        </div>
+      </section>
+
+      <section class="cards-section">
+        <div class="cards-grid" id="card-container" aria-live="polite"></div>
+        <div class="empty-state d-none" id="empty-state">
+          <h2>No encontre resultados para esa busqueda.</h2>
+          <p>Prueba con otro nombre, un tipo como <strong>water</strong> o un numero de Pokedex.</p>
+        </div>
+      </section>
     </main>
+    <div id="modal-root"></div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -107,7 +143,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-
     <script src="pokedex.js"></script>
     <script src="main.js"></script>
   </body>
